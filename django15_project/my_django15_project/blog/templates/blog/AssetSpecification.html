@@ -1,0 +1,16 @@
+{% extends "Nav_Bar.html" %}
+{% block content %}
+<div class="formhead">
+    <p>Add Tech Document</p>
+</div>
+<form class="subform"
+      method="POST" enctype='multipart/form-data'>
+    {% csrf_token %}
+
+    <div class="input"  >
+        {{ form }}
+
+        <button type="submit" class="save btn btn-default">Save</button>
+    </div>
+</form>
+    {% endblock content %}
